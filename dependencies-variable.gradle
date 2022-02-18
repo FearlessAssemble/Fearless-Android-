@@ -1,0 +1,153 @@
+ext {
+    kotlin = "1.3.72"
+    navigation = "2.3.0"
+    paging = "3.0.0"
+
+    stetho = '1.5.1'
+    work = "2.3.1"
+    firebase_core = '17.0.0'
+    retrofit = '2.5.0'
+    room = '2.0.0'
+    lombok = '1.16.20'
+    coroutines = '1.3.7'
+    glide = "4.12.0"
+
+    exoplayer_version = '2.12.0'
+}
+
+
+ext.dependencies = [
+        classpath    : [
+                "org.jetbrains.kotlin:kotlin-gradle-plugin:$ext.kotlin",
+                "com.android.tools.build:gradle:4.1.1",
+                "com.google.firebase:firebase-crashlytics-gradle:2.1.1",
+                "com.google.gms:google-services:4.3.3",
+                "com.google.firebase:perf-plugin:1.3.1",
+                "com.github.dcendents:android-maven-gradle-plugin:2.1"
+        ],
+
+        common       : [
+                "androidx.core:core-ktx:1.2.0",
+                "com.google.android.material:material:1.3.0",
+                "androidx.constraintlayout:constraintlayout:2.0.4",
+                "androidx.vectordrawable:vectordrawable:1.1.0",
+                "androidx.navigation:navigation-fragment:$ext.navigation",
+                "androidx.navigation:navigation-ui:$ext.navigation",
+                "androidx.navigation:navigation-fragment-ktx:$ext.navigation",
+                "androidx.navigation:navigation-ui-ktx:$ext.navigation",
+                "androidx.lifecycle:lifecycle-extensions:2.1.0",
+//                "commons-codec:commons-codec:1.10",
+                "com.google.android.play:core:1.8.0",
+                "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$ext.kotlin",
+                "org.jetbrains.kotlin:kotlin-reflect:$ext.kotlin",
+                "androidx.appcompat:appcompat:1.2.0",
+                "androidx.activity:activity:1.1.0",
+                "androidx.paging:paging-runtime:$ext.paging", // use -ktx for Kotlin
+                "androidx.paging:paging-rxjava2:$ext.paging", // use -ktx for Kotlin
+                "androidx.paging:paging-rxjava3:$ext.paging", // use -ktx for Kotlin
+                "androidx.paging:paging-runtime-ktx:$ext.paging",
+                "androidx.paging:paging-guava:$ext.paging",
+                "androidx.paging:paging-compose:1.0.0-alpha09",
+
+                "com.android.support:design:28.0.0",
+        ],
+
+        app          : [
+                "io.reactivex.rxjava2:rxandroid:2.1.0",
+                "io.reactivex.rxjava2:rxjava:2.2.4",
+
+                "org.jetbrains.kotlinx:kotlinx-coroutines-core:$ext.coroutines",
+                "org.jetbrains.kotlinx:kotlinx-coroutines-android:$ext.coroutines",
+                "org.jetbrains.kotlinx:kotlinx-coroutines-rx2:$ext.coroutines",
+
+                // retrofit
+                "com.squareup.retrofit2:retrofit:$ext.retrofit",
+                "com.squareup.retrofit2:converter-gson:$ext.retrofit",
+                "com.squareup.retrofit2:adapter-rxjava2:$ext.retrofit",
+                "com.squareup.retrofit2:converter-scalars:$ext.retrofit",
+
+                "com.squareup.okhttp3:okhttp:4.9.0",
+                "com.squareup.okhttp3:logging-interceptor:4.9.0",
+                'com.squareup.okhttp3:okhttp-urlconnection:4.9.0',
+                'com.github.bumptech.glide:okhttp3-integration:4.9.0',
+
+                "com.facebook.stetho:stetho:$ext.stetho",
+                "com.facebook.stetho:stetho-okhttp3:$ext.stetho",
+
+                "com.google.firebase:firebase-core:$ext.firebase_core",
+                "com.google.firebase:firebase-analytics:$ext.firebase_core",
+                'com.google.firebase:firebase-crashlytics:17.2.2',
+                'com.firebase:firebase-jobdispatcher:0.8.6',
+
+                'com.google.android.gms:play-services-analytics:17.0.0',
+                'com.google.android.gms:play-services-auth:18.1.0',
+                'com.google.android.gms:play-services-oss-licenses:17.0.0',
+                'com.google.android.gms:play-services-location:15.0.1',
+
+                "com.google.code.gson:gson:2.6.1",
+                "com.google.auto.value:auto-value:1.2",
+                "com.ryanharter.auto.value:auto-value-gson:0.4.2",
+
+                'com.onesignal:OneSignal:3.15.7',
+
+                // glide
+                "com.github.bumptech.glide:glide:$ext.glide",
+                'jp.wasabeef:glide-transformations:4.3.0',
+                'jp.co.cyberagent.android:gpuimage:2.1.0',
+
+                "androidx.viewpager2:viewpager2:1.0.0",
+
+                "androidx.room:room-runtime:$ext.room",
+                "androidx.room:room-rxjava2:$ext.room",
+
+
+                "androidx.work:work-runtime-ktx:$ext.work",
+                'androidx.work:work-runtime:2.1.0',
+
+                'com.android.support:recyclerview-v7:28.0.0',
+                'com.android.support:appcompat-v7:28.0.0',
+                'it.sephiroth.android.library.imagezoom:imagezoom:2.3.0',
+                'com.github.CanHub:Android-Image-Cropper:2.3.1',
+
+                "com.google.android.exoplayer:exoplayer-core:$exoplayer_version",
+                "com.google.android.exoplayer:exoplayer-ui:$exoplayer_version",
+                "com.google.android.exoplayer:exoplayer-hls:$exoplayer_version"
+        ],
+
+        app_processor: [
+                "androidx.room:room-compiler:$ext.room",
+                "org.projectlombok:lombok:$ext.lombok",
+        ],
+
+        app_kapt     : [
+                "com.github.bumptech.glide:compiler:$ext.glide",
+                "android.arch.persistence.room:compiler:1.1.1",
+        ],
+
+        library      : [
+                "androidx.multidex:multidex:2.0.0",
+        ],
+
+        test         : [
+                "junit:junit:4.12",
+                "androidx.paging:paging-common:$ext.paging", // use -ktx for Kotlin
+
+                /*
+                testrule                    : "com.android.support.test:rules:0.5",
+                espresso_intent             : "com.android.support.test.espresso:espresso-intents:2.2.2",
+                dexmaker_mockito            : "com.crittercism.dexmaker:dexmaker-mockito:1.4",
+                dexmaker_dx                 : "com.crittercism.dexmaker:dexmaker-dx:1.4",
+                mockito                     : "org.mockito:mockito-core:1.10.19",
+                awaitility                  : "com.jayway.awaitility:awaitility:1.7.+",
+                kotlin_test                 : "org.jetbrains.kotlin:kotlin-test:$ext.kotlin",
+                kotlin_test_junit           : "org.jetbrains.kotlin:kotlin-test-junit:$ext.kotlin"
+                */
+        ],
+
+        test_ui      : [
+                "androidx.test.ext:junit:1.1.1",
+                "androidx.test.espresso:espresso-core:3.2.0",
+                "androidx.test:runner:1.1.1",
+                "androidx.work:work-testing:$ext.work",
+        ]
+]

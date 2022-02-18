@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Fearless+</string>
+    <string name="brave_girls">Brave girls</string>
+
+    <string name="gallery">Gallery</string>
+    <string name="bgtube">BGTube</string>
+    <string name="information">Information</string>
+    <string name="chart">Chart</string>
+    <string name="schedule">Schedule</string>
+    <string name="aboutbg">AboutBG</string>
+    <string name="setting">Setting</string>
+
+    <string name="sns">SNS</string>
+    <string name="dc_gallery">Brave girls Gallery</string>
+    <string name="instagram">instagram</string>
+    <string name="twitter">twitter</string>
+    <string name="notice">notice</string>
+    <string name="fund">fund</string>
+    <string name="event">Event</string>
+
+    <string name="support">SUPPORT</string>
+
+    <string name="today">Today</string>
+    <string name="all_day">all day</string>
+
+
+    <string name="go">go</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="group_name">BRAVE GIRLS</string>
+
+    <string name="about_minyeong_name">MINYOUNG</string>
+    <string name="about_minyeong_part">Main Vocalist</string>
+
+    <string name="about_yujeong_name">YUJEONG</string>
+    <string name="about_yujeong_part">Vocalist</string>
+
+    <string name="about_eunji_name">EUNJI</string>
+    <string name="about_eunji_part">Vocalist</string>
+
+    <string name="about_yuna_name">YUNA</string>
+    <string name="about_yuna_part">Lead Vocalist</string>
+
+    <string name="light_mode">Light Mode</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="system_default">System Default</string>
+
+
+    <string name="update_message_flexible">A new version of Fearless+ is available for download.</string>
+    <string name="update_message_immediate">Please update to the latest version of the app to continue.</string>
+    <string name="update">Update</string>
+    <string name="later">Later</string>
+    <string name="close">Close</string>
+
+</resources>

@@ -1,0 +1,9 @@
+rootProject.buildscript.repositories {
+    google()
+    jcenter()
+}
+
+
+rootProject.buildscript.dependencies {
+    classpath rootProject.ext.dependencies.classpath
+}

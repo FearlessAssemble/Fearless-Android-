@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:clickable="false"
+    android:gravity="bottom">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/Widget.Design.BottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@color/cardview_dark_background"
+        android:minHeight="48dp"
+        android:orientation="horizontal"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="12dp"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+        <TextView
+            android:id="@+id/snackbar_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginVertical="8dp"
+            android:layout_marginLeft="8dp"
+            android:textAppearance="@style/TextAppearance.Design.Snackbar.Message"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/snackbar_button_layout"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Load More ?Load More ?Load More ?Load More ?Load More ?Load More ?Load More ?Load More ?Load More ?Load More ?Load More ?Load More ?" />
+
+        <LinearLayout
+            android:id="@+id/snackbar_button_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="right"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/snackbar_nagative"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:alpha="0.6"
+                android:background="@android:color/transparent"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textAllCaps="true"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                tools:text="No" />
+
+            <TextView
+                android:id="@+id/snackbar_positive"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textAllCaps="true"
+                android:textColor="@color/orange"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                tools:text="Yes" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

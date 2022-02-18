@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_gallery"
+        android:icon="@drawable/ico_gallery"
+        android:visible="true"
+        android:title="@string/gallery" />
+<!--
+
+    <item
+        android:id="@+id/navigation_gallery"
+        android:icon="@drawable/ico_chart"
+        android:visible="true"
+        android:title="@string/chart" />
+-->
+
+    <item
+        android:id="@+id/navigation_bg_tube"
+        android:icon="@drawable/ico_bgtube"
+        android:title="@string/bgtube" />
+<!--
+    <item
+        android:id="@+id/navigation_event"
+        android:icon="@drawable/ico_campaign"
+        android:visible="true"
+        android:title="@string/title_event" />
+    -->
+    <item
+        android:id="@+id/navigation_information"
+        android:icon="@drawable/ico_campaign"
+        android:visible="true"
+        android:title="@string/information" />
+
+    <item
+        android:id="@+id/navigation_about_bg"
+        android:icon="@drawable/ico_bg_logo"
+        android:title="@string/aboutbg" />
+
+</menu>

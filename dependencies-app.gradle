@@ -1,0 +1,45 @@
+rootProject.allprojects { project ->
+
+    if (project.name == 'app') {
+
+        project.afterEvaluate {
+
+            repositories {
+                google()
+                jcenter()
+            }
+
+            dependencies {
+                implementation fileTree(dir: 'libs', include: ['*.jar'])
+                testImplementation rootProject.ext.dependencies.test
+                androidTestImplementation rootProject.ext.dependencies.test_ui
+                annotationProcessor rootProject.ext.dependencies.app_processor
+                kapt rootProject.ext.dependencies.app_kapt
+
+                implementation rootProject.ext.dependencies.common
+                implementation rootProject.ext.dependencies.app
+            }
+
+        }
+    } else if (project.name == 'library') {
+
+        project.afterEvaluate {
+
+            repositories {
+                google()
+                jcenter()
+            }
+
+            dependencies {
+                implementation fileTree(dir: 'libs', include: ['*.jar'])
+                testImplementation rootProject.ext.dependencies.test
+                androidTestImplementation rootProject.ext.dependencies.test_ui
+
+                implementation rootProject.ext.dependencies.common
+                implementation rootProject.ext.dependencies.library
+
+
+            }
+        }
+    }
+}

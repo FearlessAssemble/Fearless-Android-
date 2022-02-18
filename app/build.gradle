@@ -1,0 +1,124 @@
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.gms.google-services'
+
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/' }
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.11.0, 0.99.99]'
+    }
+}
+
+repositories {
+    maven { url 'https://maven.google.com' }
+    maven { url "https://fyber.bintray.com/marketplace" }
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+
+android {
+    dataBinding {
+        enabled = true
+    }
+    useLibrary 'org.apache.http.legacy'
+
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "net.fearlessplus"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 22
+        versionName "1.2.1"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+
+        manifestPlaceholders = [
+                onesignal_app_id               : "04dacac2-b557-46bb-8845-c8d5468268d3",
+                // Project number pulled from dashboard, local value is ignored.
+                onesignal_google_project_number: "REMOTE"
+        ]
+    }
+    dexOptions {
+        jumboMode true
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
+
+
+    signingConfigs {
+        release {
+
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            debuggable true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    kotlin {
+        experimental {
+            coroutines 'enable'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+
+
+    lintOptions {
+        abortOnError false
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+}
+
+dependencies {
+    implementation project(':library')
+    implementation fileTree(dir: 'libs', include: '*.jar')
+//    implementation 'com.github.skizo-io:SBOX:0.1.+'
+
+    implementation 'com.google.api-client:google-api-client:1.30.4'
+    implementation 'com.google.oauth-client:google-oauth-client-jetty:1.30.6'
+    implementation 'com.google.apis:google-api-services-sheets:v4-rev581-1.25.0'
+    implementation 'com.google.firebase:firebase-config-ktx:21.0.0'
+}

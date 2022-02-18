@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_d1"
+    android:orientation="vertical"
+    tools:context=".ui.main.aboutbg.AboutBgFragment">
+
+
+    <include layout="@layout/component_appbar" />
+
+
+    <TextView
+        style="@style/T14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/sns"
+        android:textColor="@color/gray02"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/setting_noti_instagram"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/T16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/instagram"
+            android:textColor="@color/gray01" />
+
+        <include
+            layout="@layout/item_toggle_button" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setting_noti_twitter"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/T16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/twitter"
+            android:textColor="@color/gray01" />
+
+        <include
+            layout="@layout/item_toggle_button" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/LineGrey"
+        android:layout_height="10dp" />
+
+
+    <TextView
+        style="@style/T14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/dc_gallery"
+        android:textColor="@color/gray02"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/setting_noti_notice"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/T16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notice"
+            android:textColor="@color/gray01" />
+
+        <include
+            layout="@layout/item_toggle_button" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setting_noti_collection"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/T16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fund"
+            android:textColor="@color/gray01" />
+
+        <include
+            layout="@layout/item_toggle_button" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setting_noti_event"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/T16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/event"
+            android:textColor="@color/gray01" />
+
+        <include
+            layout="@layout/item_toggle_button" />
+    </RelativeLayout>
+
+
+    <View
+        style="@style/LineGrey"
+        android:layout_height="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/dark_mode_layout"
+        style="@style/Button"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/ripple_background"
+        android:paddingHorizontal="19dp">
+
+        <TextView
+
+            style="@style/T16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="theme"
+            android:textColor="@color/gray01" />
+
+        <TextView
+            android:id="@+id/dark_mode_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/mode_arrow"
+            android:gravity="end"
+            android:lineSpacingExtra="6dp"
+            android:textColor="@color/gray01"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:id="@+id/mode_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/ico_more_arrow" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/opensource_licenses"
+            style="@style/T16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/event"
+            android:visibility="gone"
+            android:textColor="@color/gray01" />
+
+        <TextView
+            android:id="@+id/setting_version_text"
+            style="@style/T12"
+            android:textColor="@color/gray03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            tools:text="version 1.0.0" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

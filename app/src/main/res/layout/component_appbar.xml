@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.fearlessplus.ui.component.FPAppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/appbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/base_d1"
+    app:elevation="0dp">
+
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:contentScrim="@android:color/transparent"
+        app:expandedTitleMarginEnd="72dp"
+        app:expandedTitleMarginStart="16dp"
+        app:expandedTitleMarginTop="58dp"
+        app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Subhead"
+        app:layout_scrollFlags="exitUntilCollapsed|scroll">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:contentInsetStart="0dp"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/appbar_back"
+                        style="@style/Button"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:padding="10dp"
+                        android:src="@drawable/ico_back"
+                        android:visibility="gone"
+                        app:tint="@color/gray01" />
+
+                    <RelativeLayout
+                        android:id="@+id/appbar_notification_layout"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/appbar_notification"
+                            style="@style/Button"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="10dp"
+                            android:src="@drawable/ico_notification"
+                            app:tint="@color/gray01" />
+
+                        <ImageView
+                            android:id="@+id/appbar_notification_badge"
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="14dp"
+                            android:src="@drawable/ico_badge"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+
+                <TextView
+                    android:id="@+id/appbar_title"
+                    style="@style/T16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:textColor="@color/gray01" />
+
+
+                <ImageView
+                    android:id="@+id/appbar_setting"
+                    style="@style/Button"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:src="@drawable/ico_setting"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/gray01" />
+
+                <ImageView
+                    android:id="@+id/appbar_gallery_type"
+                    style="@style/Button"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:src="@drawable/ico_setting"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/gray01" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/appbar_tablayout"
+        style="@style/TabLayoutCustom"
+        android:layout_width="match_parent"
+        android:visibility="gone" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/appbar_tablayout_default"
+        style="@style/TabLayoutDefault"
+        android:layout_width="match_parent"
+        android:visibility="gone" />
+
+
+    <!--
+            <item name="android:clipToPadding">false</item>
+        <item name="tabIndicatorColor">@color/primary</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabIndicatorFullWidth">true</item>
+        <item name="tabPaddingStart">10dp</item>
+        <item name="tabPaddingEnd">10dp</item>
+        <item name="textAllCaps">false</item>
+        <item name="tabMaxWidth">0dp</item>
+        <item name="tabMinWidth">50dp</item>
+        <item name="android:stretchColumns">*</item>
+        <item name="tabContentStart">0dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabSelectedTextColor">@color/mode01</item>
+        <item name="tabTextColor">@color/mode04</item>
+        <item name="tabTextAppearance">@style/T16Tab</item>
+    -->
+
+    <FrameLayout
+        android:id="@+id/appbar_line"
+        style="@style/LineGrey"
+        android:visibility="gone" />
+
+
+</net.fearlessplus.ui.component.FPAppBarLayout>
+

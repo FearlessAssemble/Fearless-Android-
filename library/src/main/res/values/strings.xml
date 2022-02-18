@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Library</string>
+
+    <plurals name="number_of_times">
+        <item quantity="one">%d %s</item>
+        <item quantity="other">%d %ss</item>
+    </plurals>
+
+    <string name="day">day</string>
+    <string name="hour">hour</string>
+    <string name="min">min</string>
+
+
+</resources>

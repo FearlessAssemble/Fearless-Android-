@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+    <style name="BotMenuOn" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">9dp</item>
+        <item name="android:lineSpacingExtra">1dp</item>
+        <item name="android:textColor">@color/gray01</item>
+    </style>
+    <style name="BotMenuOff" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">9dp</item>
+        <item name="android:lineSpacingExtra">1dp</item>
+        <item name="android:textColor">@color/gray04</item>
+    </style>
+
+    <style name="T12">
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <style name="T14">
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">14dp</item>
+        <item name="lineHeight">20dp</item>
+        <item name="android:lineSpacingExtra">6dp</item>
+    </style>
+
+    <style name="T16">
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:lineSpacingExtra">8dp</item>
+    </style>
+
+    <style name="T18">
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:lineSpacingExtra">8dp</item>
+    </style>
+    <style name="T16Tab" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:dividerPadding">2dp</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:textColor">@color/gray01</item>
+        <item name="android:divider">@color/black</item>
+    </style>
+    <style name="T16Button" parent="Button">
+        <item name="android:gravity">end</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+    </style>
+
+    <style name="T20">
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+
+</resources>

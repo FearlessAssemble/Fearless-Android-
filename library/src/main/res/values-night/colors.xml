@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gray01">#F3F3F3</color>
+    <color name="gray02">#C3C9D1</color>
+    <color name="gray03">#9298A0</color>
+    <color name="gray04">#757B82</color>
+    <color name="gray05">#54585E</color>
+    <color name="gray06">#383A3F</color>
+    <color name="gray07">#2C2C31</color>
+    <color name="gray08">#222226</color>
+
+    <color name="base_root">#151519</color>
+    <color name="base_d1">#222226</color>
+    <color name="base_d2">#2F2F32</color>
+</resources>

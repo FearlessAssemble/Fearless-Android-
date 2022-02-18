@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent">#00000000</color>
+    <color name="orange">#FF9D6B</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_a10">#1Affffff</color>
+    <color name="white_a30">#4DFFFFFF</color>
+    <color name="white_a40">#66FFFFFF</color>
+    <color name="white_a50">#80ffffff</color>
+    <color name="white_a80">#CCffffff</color>
+    <color name="white_a90">#E6FFFFFF</color>
+
+    <color name="black">#FF000000</color>
+    <color name="black_a10">#1A000000</color>
+    <color name="black_a30">#33000000</color>
+    <color name="black_a40">#66000000</color>
+    <color name="black_a50">#80000000</color>
+    <color name="black_a80">#CC000000</color>
+    <color name="black_a90">#E6000000</color>
+
+    <color name="gray01">#212529</color>
+    <color name="gray02">#495057</color>
+    <color name="gray03">#868e96</color>
+    <color name="gray04">#adb5bd</color>
+    <color name="gray05">#ced4da</color>
+    <color name="gray06">#dee2e6</color>
+    <color name="gray07">#e9ecef</color>
+    <color name="gray08">#f1f3f5</color>
+
+    <color name="base_root">#ffffff</color>
+    <color name="base_d1">#ffffff</color>
+    <color name="base_d2">#ffffff</color>
+</resources>

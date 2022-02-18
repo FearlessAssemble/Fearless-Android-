@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "322871008244",
+    "project_id": "fearlessplus-48479",
+    "storage_bucket": "fearlessplus-48479.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322871008244:android:d0d5f6620320925613f7a1",
+        "android_client_info": {
+          "package_name": "net.fearlessplus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "322871008244-3ns4258anl9pc4u5r2s01t17asssm59h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWIObA6UDlhN6D_EMvDIgjlTXkg2veVQ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "322871008244-3ns4258anl9pc4u5r2s01t17asssm59h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="data"
+            type="net.fearlessplus.model.AboutInfoDataItem" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/about_support_top"
+            style="@style/LineGrey"
+            visible="@{data.isTop}"
+            android:layout_height="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            style="@style/T16"
+            visible="@{data.isTop}"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray01"
+            android:layout_marginTop="8dp"
+            android:text="@string/support"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            style="@style/Button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:onClick="@{(view)->data.onClick(context, view)}"
+            android:paddingHorizontal="10dp">
+
+            <TextView
+                style="@style/T16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{data.title}"
+                android:textColor="@color/gray01" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ico_more_arrow" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</layout>

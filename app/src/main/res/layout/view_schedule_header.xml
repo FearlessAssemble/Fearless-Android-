@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="data"
+            type="net.fearlessplus.model.ScheduleItem" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/view_schedule_header_layout"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:paddingVertical="8dp"
+        android:background="@color/gray07"
+        android:gravity="center_horizontal|bottom"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/T14"
+            android:id="@+id/view_schedule_header_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orange"
+            android:layout_marginBottom="4dp"
+            tools:text="12월" />
+
+
+        <TextView
+            android:id="@+id/view_schedule_header_day"
+            style="@style/T16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"
+            tools:text="7" />
+
+    </LinearLayout>
+</layout>

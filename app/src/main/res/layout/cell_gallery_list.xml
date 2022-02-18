@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="net.fearlessplus.model.GalleryItem" />
+
+        <variable
+            name="listener"
+            type="net.fearlessplus.ui.main.gallery.GalleryListFragment.OnClickItemListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{()->listener.onClick(context, data)}">
+<!--            android:onClick="@{(view)->data.onClick(context, view)}">-->
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cell_video_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintCircleRadius="2dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                url="@{data.contentThumb}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                visible="@{data.isVideoType}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ico_youtube" />
+
+            <TextView
+                visible="@{data.isGifType}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:background="@color/white_a30"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="1dp"
+                android:text="gif"
+                android:textColor="@color/black_a50"
+                android:textSize="10dp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

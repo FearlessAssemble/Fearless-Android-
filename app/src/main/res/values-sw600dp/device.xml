@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="is_smart_phone">false</bool>
+
+    <integer name="video_title_line">1</integer>
+</resources>

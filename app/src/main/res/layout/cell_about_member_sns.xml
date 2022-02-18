@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="data"
+            type="net.fearlessplus.model.SnsInfoItem" />
+    </data>
+
+    <ImageView
+        style="@style/Button"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        app:imageResource="@{data.snsIconResId}"
+        android:onClick="@{(view)->data.onClick(context, view)}"
+        android:paddingHorizontal="4dp"
+        />
+
+</layout>

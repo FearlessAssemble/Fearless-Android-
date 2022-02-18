@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recyclerview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:dividerHeight="1dp"
+    android:drawSelectorOnTop="true"
+    android:fadingEdge="none"
+    android:fastScrollEnabled="false"
+    android:footerDividersEnabled="false"
+    android:headerDividersEnabled="true"
+    android:nestedScrollingEnabled="true"
+    android:overScrollMode="never"
+    android:smoothScrollbar="true"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
